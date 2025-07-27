@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>データと実績 - 愛媛県上島町</title>
+    <title>データと実績 - 上島町への投資</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Clash+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -24,53 +24,89 @@
                 <span></span>
                 <span></span>
             </button>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
         </div>
     </header>
 
     <main>
         <section class="section-padding">
             <div class="container">
-                <h1 class="section-title">上島町のデータと実績</h1>
-                <p>上島町の持続可能な発展に向けた取り組みは、具体的なデータと実績に裏打ちされています。ここでは、主要なKPI（重要業績評価指標）を公開し、透明性の高い情報を提供します。</p>
+                <h2 class="section-title">KPIリアルタイムダッシュボード</h2>
+                <p class="text-center" style="margin-bottom: var(--spacing-xl);">上島町の地域創生の進捗を、透明性をもってリアルタイムでご報告します。</p>
 
-                <div class="data-dashboard">
-                    <h2>KPIリアルタイムダッシュボード</h2>
-                    <p>上島町の持続可能な発展に向けた取り組みは、具体的なデータと実績に裏打ちされています。ここでは、主要なKPI（重要業績評価指標）を公開し、透明性の高い情報を提供します。</p>
-                    <div class="placeholder-dashboard" style="height: 500px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #888;">
-                        <p>ダッシュボードのプレースホルダー</p>
+                <div class="dashboard-grid">
+                    <!-- Economic KPIs -->
+                    <div class="dashboard-card large">
+                        <h3>経済インパクト</h3>
+                        <div class="main-kpi">
+                            <span class="kpi-value">2,850<span class="kpi-unit">万円</span></span>
+                            <span class="kpi-label">企業版ふるさと納税 受入総額 (累計)</span>
+                        </div>
+                        <div class="sub-kpi-grid">
+                            <div class="kpi-item-small">
+                                <span class="kpi-value">11<span class="kpi-unit">社</span></span>
+                                <span class="kpi-label">サテライトオフィス誘致数</span>
+                            </div>
+                            <div class="kpi-item-small">
+                                <span class="kpi-value">30<span class="kpi-unit">名</span></span>
+                                <span class="kpi-label">新規雇用創出数</span>
+                            </div>
+                            <div class="kpi-item-small">
+                                <span class="kpi-value">8<span class="kpi-unit">社</span></span>
+                                <span class="kpi-label">新規事業所設立数</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="data-story-telling">
-                        <h3>データ・ストーリーテリング</h3>
-                        <p><strong>企業版ふるさと納税 受入総額:</strong> 累計額と年度別推移、寄附企業数を公開し、企業からの支援がどのように地域に還元されているかを可視化します。</p>
-                        <p><strong>誘致企業数:</strong> サテライトオフィス誘致数や新規事業所設立数を通じて、上島町が新たなビジネス拠点として選ばれている実績を示します。</p>
-                        <p><strong>CO2排出量削減率:</strong> 2030年度までに温室効果ガス排出量を2013年度比で58%削減するという野心的な目標の進捗を追跡します。ブルーカーボン吸収量（藻場造成面積に基づく推計値）や再生可能エネルギー導入量も合わせて公開し、環境への貢献を定量的に示します。</p>
-                        <p><strong>人口動態:</strong> 総人口・世帯数の推移（2025年目標6,100人）や移住者数、新規雇用創出数を公開し、地域活性化への取り組みが人口構造に与える影響を分析します。</p>
-                        <p class="disclaimer">※ここに表示されるデータはダッシュボードのプレースホルダーです。実際のデータは外部ツールで提供されます。</p>
+
+                    <!-- Environmental KPIs -->
+                    <div class="dashboard-card">
+                        <h3>環境インパクト</h3>
+                        <div class="main-kpi">
+                            <span class="kpi-value">-12<span class="kpi-unit">%</span></span>
+                            <span class="kpi-label">温室効果ガス排出量 (2013年度比)</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-label">2030年目標: -58%</div>
+                            <div class="progress-bar">
+                                <div style="width: 20.7%;"></div> <!-- 12 / 58 * 100 -->
+                            </div>
+                        </div>
+                        <div class="kpi-item-small" style="margin-top: var(--spacing-md);">
+                            <span class="kpi-value">5.2<span class="kpi-unit">ha</span></span>
+                            <span class="kpi-label">ブルーカーボン藻場 造成面積</span>
+                        </div>
+                    </div>
+
+                    <!-- Social KPIs -->
+                    <div class="dashboard-card">
+                        <h3>社会インパクト</h3>
+                        <div class="main-kpi">
+                            <span class="kpi-value">6,028<span class="kpi-unit">人</span></span>
+                            <span class="kpi-label">現在人口 (2025年6月)</span>
+                        </div>
+                         <div class="sub-kpi-grid">
+                            <div class="kpi-item-small">
+                                <span class="kpi-value">+15<span class="kpi-unit">人</span></span>
+                                <span class="kpi-label">移住者数 (今年度)</span>
+                            </div>
+                            <div class="kpi-item-small">
+                                <span class="kpi-value">12<span class="kpi-unit">名</span></span>
+                                <span class="kpi-label">弓削高校 町外からの入学者</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="open-data-section">
-                    <h2>オープンデータと一次情報</h2>
-                    <p>上島町の政策決定や取り組みの根拠となる一次情報や生データにアクセスできます。透明性を確保し、投資家や研究者の皆様のデューデリジェンスを支援します。</p>
-                    <ul>
-                        <li><a href="assets/docs/regulations/kamijima_investment_ordinance.pdf" target="_blank">上島町企業誘致促進条例 (PDF)</a></li>
-                        <li><a href="assets/docs/regulations/kamijima_furusato_tax_guideline.pdf" target="_blank">上島町企業版ふるさと納税実施要綱 (PDF)</a></li>
-                        <li><a href="assets/docs/plans/kamijima_comprehensive_plan.pdf" target="_blank">上島町第2次総合計画 (PDF)</a></li>
-                        <li><a href="assets/docs/plans/kamijima_climate_change_plan.pdf" target="_blank">上島町地球温暖化対策実行計画 (PDF)</a></li>
-                        <li><a href="assets/docs/plans/kamijima_hamano_plan.pdf" target="_blank">浜の活力再生プラン (PDF)</a></li>
-                        <li><a href="assets/docs/plans/kamijima_regional_revitalization_plan.pdf" target="_blank">上島町まち・ひと・しごと創生推進計画 (PDF)</a></li>
-                    </ul>
-                    <p><a href="assets/data/kpi_data.csv" class="btn btn-primary" download>ダッシュボードデータをCSVでダウンロード</a></p>
-                    <p>年次報告書やよくある質問（FAQ）については、準備が整い次第、順次公開予定です。</p>
+                <div class="text-center" style="margin-top: var(--spacing-xl);">
+                    <a href="#" class="btn btn-secondary">全データをCSV形式でダウンロード</a>
                 </div>
-
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 愛媛県上島町. All rights reserved.</p>
+            <p>【テストサイトです】 &copy; 2025 愛媛県上島町. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">プライバシーポリシー</a>
                 <a href="#">サイトマップ</a>
@@ -78,7 +114,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
