@@ -113,23 +113,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Custom Cursor (Optional, if you want to enable it)
-    // const customCursor = document.querySelector('.custom-cursor');
-    // if (customCursor) {
-    //     document.addEventListener('mousemove', (e) => {
-    //         customCursor.style.left = e.clientX + 'px';
-    //         customCursor.style.top = e.clientY + 'px';
-    //     });
+    // Custom Cursor
+    const customCursor = document.querySelector('.custom-cursor');
+    if (customCursor) {
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px';
+        });
 
-    //     document.querySelectorAll('a, button, .theme-item, .kpi-item, .story-item').forEach(el => {
-    //         el.addEventListener('mouseenter', () => {
-    //             customCursor.classList.add('hover');
-    //         });
-    //         el.addEventListener('mouseleave', () => {
-    //             customCursor.classList.remove('hover');
-    //         });
-    //     });
-    // }
+        document.querySelectorAll('a, button, .theme-item, .kpi-item, .story-item, .investment-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                customCursor.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                customCursor.classList.remove('hover');
+            });
+        });
+    }
 
     // Apply saved theme on load (moved outside the toggle button check)
     if (localStorage.getItem('theme') === 'dark') {
