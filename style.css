@@ -250,6 +250,24 @@ a:hover {
     color: var(--color-white);
 }
 
+.video-source {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+}
+
+.video-source a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+}
+
+.video-source a:hover {
+    color: var(--color-white);
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
