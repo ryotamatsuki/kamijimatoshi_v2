@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Clash+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="custom-cursor"></div>
     <header class="header">
         <div class="container">
             <h1 class="logo"><a href="index.html">上島町</a></h1>
@@ -24,11 +25,16 @@
                 <span></span>
                 <span></span>
             </button>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
         </div>
     </header>
 
     <main>
         <section class="hero">
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="videos/ハリウッド風動画作成完了.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="hero-content">
                 <h2>未来を共創する、<br>新たな投資の形がここに。</h2>
                 <p>愛媛県上島町は、持続可能な未来を共に築くパートナーを求めています。</p>
@@ -36,35 +42,35 @@
             </div>
         </section>
 
-        <section class="investment-themes section-padding">
+        <section class="investment-themes section-padding fade-in">
             <div class="container">
                 <h2 class="section-title">上島町への投資の戦略的意義</h2>
                 <div class="theme-grid">
                     <div class="theme-item">
                         <h3>企業版ふるさと納税</h3>
                         <p>1,000万円の寄附で実質100万円負担。税制優遇を活用し、地域創生プロジェクトに貢献できます。</p>
-                        <a href="#" class="btn btn-secondary">詳細を見る</a>
+                        <a href="investment_corporate_hometown_tax.html" class="btn btn-secondary">詳細を見る</a>
                     </div>
                     <div class="theme-item">
                         <h3>サテライトオフィス誘致</h3>
                         <p>情報通信関連企業に年間最大1,000万円の補助。光ファイバー網も整備され、新たなビジネス拠点に最適です。</p>
-                        <a href="#" class="btn btn-secondary">詳細を見る</a>
+                        <a href="investment_satellite_office.html" class="btn btn-secondary">詳細を見る</a>
                     </div>
                     <div class="theme-item">
                         <h3>官民連携プロジェクト</h3>
-                        <p>デジタル・スマートアイランド、再生可能エネルギー、ブルーカーボンなど、新たな事業機会を創出します。</p>
-                        <a href="#" class="btn btn-secondary">詳細を見る</a>
+                        <p>デジタル・スマートアイランド、再生可能エネルギーなど、新たな事業機会。</p>
+                        <a href="investment_ppp_projects.html" class="btn btn-secondary">詳細を見る</a>
                     </div>
                     <div class="theme-item">
                         <h3>ESG/SDGsへの貢献</h3>
-                        <p>2030年までにCO2排出量58%削減目標。ブルーカーボンや弓削高校魅力化プロジェクトで社会的価値を創造します。</p>
-                        <a href="#" class="btn btn-secondary">詳細を見る</a>
+                        <p>CO2削減、ブルーカーボン、教育支援で社会的価値を創造。</p>
+                        <a href="investment_esg_sdgs.html" class="btn btn-secondary">詳細を見る</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="kpi-snapshot section-padding bg-light">
+        <section class="kpi-snapshot section-padding bg-light fade-in">
             <div class="container">
                 <h2 class="section-title">上島町のデータと実績</h2>
                 <div class="kpi-grid">
@@ -87,7 +93,7 @@
             </div>
         </section>
 
-        <section class="success-stories section-padding">
+        <section class="success-stories section-padding fade-in">
             <div class="container">
                 <h2 class="section-title">成功事例</h2>
                 <div class="story-grid">
@@ -110,7 +116,7 @@
             </div>
         </section>
 
-        <section class="cta-section bg-dark text-white section-padding">
+        <section class="cta-section bg-dark text-white section-padding fade-in">
             <div class="container text-center">
                 <h2>上島町と共に、持続可能な未来を創造しませんか？</h2>
                 <p>ご興味をお持ちいただけましたら、お気軽にお問い合わせください。</p>
