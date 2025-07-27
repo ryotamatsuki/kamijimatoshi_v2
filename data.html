@@ -97,6 +97,13 @@
                     </div>
                 </div>
 
+                </div> <!-- Closing tag for dashboard-grid -->
+
+                <div class="dashboard-card large" style="margin-top: var(--spacing-xl);">
+                    <h3>人口推移 (過去5年間)</h3>
+                    <canvas id="populationChart"></canvas>
+                </div>
+
                 <div class="text-center" style="margin-top: var(--spacing-xl);">
                     <a href="#" class="btn btn-secondary">全データをCSV形式でダウンロード</a>
                 </div>
@@ -114,6 +121,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

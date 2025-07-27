@@ -149,4 +149,69 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Population Chart (Line Graph)
+    const populationCtx = document.getElementById('populationChart');
+    if (populationCtx) {
+        new Chart(populationCtx, {
+            type: 'line',
+            data: {
+                labels: ['2020年', '2021年', '2022年', '2023年', '2024年', '2025年'],
+                datasets: [{
+                    label: '人口',
+                    data: [6800, 6650, 6500, 6350, 6200, 6028], // 仮のデータ
+                    borderColor: 'rgb(0, 123, 255)',
+                    backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                    tension: 0.3,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: '上島町 人口推移',
+                        font: {
+                            size: 16,
+                            family: 'Noto Sans JP'
+                        },
+                        color: '#333333'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: '人口 (人)',
+                            font: {
+                                family: 'Noto Sans JP'
+                            },
+                            color: '#666666'
+                        },
+                        ticks: {
+                            color: '#666666'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: '年度',
+                            font: {
+                                family: 'Noto Sans JP'
+                            },
+                            color: '#666666'
+                        },
+                        ticks: {
+                            color: '#666666'
+                        }
+                    }
+                }
+            }
+        });
+    }
 });
