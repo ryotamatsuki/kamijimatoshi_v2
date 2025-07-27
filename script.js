@@ -214,4 +214,42 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Parallax effect for hero video
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.pageYOffset;
+            // Adjust the parallax speed by changing the division factor
+            heroVideo.style.transform = `translate(-50%, calc(-50% - ${scrollPosition * 0.3}px))`;
+        });
+    }
+
+    // Page Transition Animation
+    const body = document.body;
+    const transitionDuration = 500; // CSS transition duration in ms
+
+    // Add fade-in class on page load
+    body.classList.add('page-transition-in');
+
+    document.querySelectorAll('a').forEach(link => {
+        // Exclude external links, mailto, tel, and anchor links within the same page
+        if (link.href.startsWith(window.location.origin) &&
+            !link.href.includes('#') &&
+            !link.href.startsWith('mailto:') &&
+            !link.href.startsWith('tel:')) {
+
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const destination = link.href;
+
+                body.classList.remove('page-transition-in');
+                body.classList.add('page-transition-out');
+
+                setTimeout(() => {
+                    window.location.href = destination;
+                }, transitionDuration);
+            });
+        }
+    });
 });
