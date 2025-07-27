@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - 愛媛県上島町</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Clash+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">上島町</a></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="investment.html">投資案件</a></li>
+                    <li><a href="about.html">上島町について</a></li>
+                    <li><a href="data.html">データと実績</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding">
+            <div class="container">
+                <h1 class="section-title">お問い合わせ</h1>
+                <p>上島町への投資にご興味をお持ちいただきありがとうございます。ご質問やご相談がございましたら、お気軽にお問い合わせください。</p>
+
+                <div class="contact-grid">
+                    <div class="contact-form-section">
+                        <h2>お問い合わせフォーム</h2>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">お名前 <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">会社名</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">メールアドレス <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">電話番号</label>
+                                <input type="tel" id="tel" name="tel">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                                <label for="privacy-policy">プライバシーポリシーに同意する <span class="required">*</span></label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">送信</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <h2>税控除シミュレーター</h2>
+                        <p>企業版ふるさと納税の税制優遇効果を簡易的にシミュレーションできます。</p>
+                        <div class="simulator-form">
+                            <div class="form-group">
+                                <label for="donation-amount">寄附予定額 (円) <span class="required">*</span></label>
+                                <input type="number" id="donation-amount" name="donation-amount" required min="100000">
+                            </div>
+                            <div class="form-group">
+                                <label for="taxable-income">寄附前の法人課税所得 (円) <span class="required">*</span></label>
+                                <input type="number" id="taxable-income" name="taxable-income" required min="0">
+                            </div>
+                            <button type="button" id="simulate-btn" class="btn btn-primary">3分でわかる！控除額をシミュレーション</button>
+                            <div id="simulation-result" class="simulation-result" style="display: none;">
+                                <p><strong>税の軽減効果合計額:</strong> <span id="tax-reduction-total"></span> 円</p>
+                                <p><strong>実質的な企業負担額:</strong> <span id="company-burden"></span> 円</p>
+                                <p class="disclaimer">※本シミュレーションはあくまで目安であり、正確な金額については顧問税理士等の専門家にご確認ください。</p>
+                            </div>
+                        </div>
+
+                        <h2>オンライン商談予約</h2>
+                        <p>上島町の担当者と直接オンラインでご相談いただけます。ご希望の日時を選択してください。</p>
+                        <div class="calendly-embed" style="min-width:320px;height:700px;">
+                            <!-- Calendly inline widget begin -->
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-link" style="position:relative;min-width:320px;height:700px;"></div>
+                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                            <!-- Calendly inline widget end -->
+                        </div>
+                        <p class="text-center"><a href="#" class="btn btn-primary">担当者とオンラインで話す（30分）</a></p>
+
+                        <h2>ダウンロード資料</h2>
+                        <p>上島町への投資に関する詳細資料をダウンロードいただけます。</p>
+                        <ul class="download-list">
+                            <li><a href="assets/docs/pitchdeck_jp.pdf" download>投資家向けピッチデック (日本語版) <span class="file-type">(PDF)</span></a></li>
+                            <li><a href="assets/docs/pitchdeck_en.pdf" download>Investor Pitch Deck (English) <span class="file-type">(PDF)</span></a></li>
+                            <li><a href="assets/docs/ir_onepager_jp.pdf" download>IR用ワンペーパー (日本語版) <span class="file-type">(PDF)</span></a></li>
+                            <li><a href="assets/docs/ir_onepager_en.pdf" download>IR One-Pager (English) <span class="file-type">(PDF)</span></a></li>
+                            <li><a href="assets/docs/presskit.zip" download>プレスキット <span class="file-type">(ZIP)</span></a></li>
+                        </ul>
+
+                        <h2>専門家マッチング</h2>
+                        <p>税務、法務、不動産など、進出に必要な専門家をご紹介します。お気軽にご相談ください。</p>
+                        <p><a href="#" class="btn btn-secondary">専門家紹介を依頼する</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 愛媛県上島町. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">プライバシーポリシー</a>
+                <a href="#">サイトマップ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
