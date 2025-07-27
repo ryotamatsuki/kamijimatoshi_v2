@@ -820,3 +820,172 @@ a:hover {
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --color-off-white: #1a1a1a;
+    --color-charcoal-grey: #f0f0f0;
+    --color-light-grey: #2a2a2a;
+    --color-medium-grey: #555555;
+    --color-dark-grey: #cccccc;
+    --color-white: #000000;
+    --color-black: #ffffff;
+    --color-accent: #66b3ff; /* 明るめのコバルトブルー */
+}
+
+body.dark-mode .header {
+    background-color: var(--color-light-grey);
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .logo a,
+body.dark-mode .nav ul li a {
+    color: var(--color-charcoal-grey);
+}
+
+body.dark-mode .nav-toggle span {
+    background-color: var(--color-charcoal-grey);
+}
+
+body.dark-mode .hero-content {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-black);
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #4da6ff;
+    border-color: #4da6ff;
+}
+
+body.dark-mode .btn-secondary {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+body.dark-mode .btn-secondary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-black);
+}
+
+body.dark-mode .theme-item,
+body.dark-mode .kpi-item,
+body.dark-mode .story-item,
+body.dark-mode .contact-form-section,
+body.dark-mode .contact-info-section {
+    background-color: var(--color-light-grey);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .theme-item h3,
+body.dark-mode .story-item h3,
+body.dark-mode .kpi-item .kpi-label,
+body.dark-mode .kpi-item .kpi-value,
+body.dark-mode .section-title,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode .download-list li a {
+    color: var(--color-charcoal-grey);
+}
+
+body.dark-mode .investment-incentives,
+body.dark-mode .investment-ppp-esg {
+    background-color: var(--color-light-grey);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .investment-incentives h2,
+body.dark-mode .investment-ppp-esg h2 {
+    color: var(--color-accent);
+}
+
+body.dark-mode .investment-incentives ul li::before,
+body.dark-mode .investment-ppp-esg ul li::before {
+    color: var(--color-accent);
+}
+
+body.dark-mode .filter-controls select {
+    background-color: var(--color-light-grey);
+    color: var(--color-charcoal-grey);
+    border-color: var(--color-medium-grey);
+}
+
+body.dark-mode .investment-card {
+    background-color: var(--color-light-grey);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .investment-card h3,
+body.dark-mode .investment-card p,
+body.dark-mode .investment-card .progress-text {
+    color: var(--color-charcoal-grey);
+}
+
+body.dark-mode .investment-card .tag {
+    background-color: var(--color-medium-grey);
+    color: var(--color-charcoal-grey);
+}
+
+body.dark-mode .investment-card .progress-bar {
+    background-color: var(--color-medium-grey);
+}
+
+body.dark-mode .investment-card .progress-bar div {
+    background-color: var(--color-accent);
+}
+
+body.dark-mode .modal-content {
+    background-color: var(--color-light-grey);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .modal-content h2,
+body.dark-mode .modal-content p,
+body.dark-mode .modal-body .detail-section h3 {
+    color: var(--color-charcoal-grey);
+}
+
+body.dark-mode .close-button {
+    color: var(--color-dark-grey);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background-color: var(--color-medium-grey);
+    color: var(--color-charcoal-grey);
+    border-color: var(--color-dark-grey);
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: var(--color-accent);
+}
+
+body.dark-mode .simulation-result {
+    background-color: var(--color-medium-grey);
+}
+
+body.dark-mode .simulation-result p,
+body.dark-mode .simulation-result .disclaimer {
+    color: var(--color-charcoal-grey);
+}
+
+body.dark-mode .download-list .file-type {
+    background-color: var(--color-medium-grey);
+    color: var(--color-charcoal-grey);
+}
+
+body.dark-mode .footer {
+    background-color: var(--color-light-grey);
+    box-shadow: 0 -2px 5px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .footer p,
+body.dark-mode .footer-links a {
+    color: var(--color-charcoal-grey);
+}

@@ -131,12 +131,22 @@ document.addEventListener('DOMContentLoaded', () => {
     //     });
     // }
 
-    // Dark Mode Toggle (Optional, if you want to enable it)
-    // const darkModeToggle = document.getElementById('dark-mode-toggle');
-    // if (darkModeToggle) {
-    //     darkModeToggle.addEventListener('click', () => {
-    //         document.body.classList.toggle('dark-mode');
-    //         // You would also need to define .dark-mode styles in your CSS
-    //     });
-    // }
+    // Apply saved theme on load (moved outside the toggle button check)
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            // Save user preference to localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
 });
