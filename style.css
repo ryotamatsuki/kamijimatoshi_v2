@@ -1118,77 +1118,151 @@ body.dark-mode .footer-links a {
     color: var(--color-charcoal-grey);
 }
 
-/* ==========================================================================
-   Breadcrumbs & Page Header Styles
-   ========================================================================== */
-
-.page-header-with-breadcrumbs {
-    background-color: var(--color-off-white);
-    padding: var(--spacing-lg) 0;
-    border-bottom: 1px solid var(--color-light-grey);
+/* Infographic Styles for About Page */
+.infographic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
 }
 
-.page-header-with-breadcrumbs .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--spacing-sm);
-    padding-right: var(--spacing-sm);
+.infographic-item {
+    background-color: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
 }
 
-.page-header-with-breadcrumbs h1 {
-    font-size: 3.5rem; /* Match hero h2 size for prominence */
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+.infographic-item h3 {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-lg);
+}
+
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+    border-bottom: 1px solid var(--color-medium-grey);
+    padding-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
+    justify-content: space-around;
+}
+
+.chart-container.bar-chart .bar {
+    width: 20%; /* Adjust based on number of bars */
+    background-color: var(--color-accent);
+    margin: 0 5%;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: height 0.5s ease-out;
+}
+
+.chart-container.bar-chart-single .bar {
+    width: 40%; /* Adjust for two bars */
+    background-color: var(--color-accent);
+    margin: 0 5%;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: height 0.5s ease-out;
+}
+
+.chart-container .bar.target {
+    background-color: var(--color-dark-grey); /* Different color for target */
+}
+
+.chart-container .bar::before {
+    content: attr(data-label);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
     color: var(--color-charcoal-grey);
-    margin-top: var(--spacing-sm);
-    margin-bottom: 0;
+    white-space: nowrap;
 }
 
-.breadcrumbs {
+.chart-labels {
+    display: flex;
+    justify-content: space-around;
     font-size: 0.9rem;
     color: var(--color-dark-grey);
 }
 
-.breadcrumbs a {
-    color: var(--color-dark-grey);
-    text-decoration: none;
-}
-
-.breadcrumbs a:hover {
-    color: var(--color-accent);
-    text-decoration: underline;
-}
-
-.breadcrumbs span {
-    color: var(--color-charcoal-grey);
-    font-weight: 500;
-}
-
-/* Dark mode for breadcrumbs and page header */
-body.dark-mode .page-header-with-breadcrumbs {
+/* Dark Mode for Infographics */
+body.dark-mode .infographic-item {
     background-color: var(--color-light-grey);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .infographic-item h3 {
+    color: var(--color-accent);
+}
+
+body.dark-mode .chart-container {
     border-bottom-color: var(--color-medium-grey);
 }
 
-body.dark-mode .page-header-with-breadcrumbs h1 {
+body.dark-mode .chart-container .bar {
+    background-color: var(--color-accent);
+}
+
+body.dark-mode .chart-container .bar.target {
+    background-color: var(--color-dark-grey);
+}
+
+body.dark-mode .chart-container .bar::before {
     color: var(--color-charcoal-grey);
 }
 
-body.dark-mode .breadcrumbs {
+body.dark-mode .chart-labels {
     color: var(--color-dark-grey);
 }
 
-body.dark-mode .breadcrumbs a {
-    color: var(--color-dark-grey);
+@media (max-width: 768px) {
+    .infographic-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-body.dark-mode .breadcrumbs a:hover {
-    color: var(--color-accent);
+/* Table Styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
 }
 
-body.dark-mode .breadcrumbs span {
+.data-table th,
+.data-table td {
+    border: 1px solid var(--color-light-grey);
+    padding: var(--spacing-sm);
+    text-align: left;
+}
+
+.data-table th {
+    background-color: var(--color-light-grey);
+    font-weight: 600;
     color: var(--color-charcoal-grey);
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: var(--color-off-white);
+}
+
+body.dark-mode .data-table th {
+    background-color: var(--color-medium-grey);
+    color: var(--color-charcoal-grey);
+}
+
+body.dark-mode .data-table td {
+    border-color: var(--color-medium-grey);
+}
+
+body.dark-mode .data-table tbody tr:nth-child(even) {
+    background-color: var(--color-light-grey);
 }
 
 /* ==========================================================================
@@ -1362,3 +1436,4 @@ body.dark-mode .cta-area .back-link:hover {
         width: 100%;
     }
 }
+
